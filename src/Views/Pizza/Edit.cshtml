@@ -1,0 +1,62 @@
+﻿@model PizzaProject.Models.Pizza
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Pizza</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="pizzaId" />
+            <div class="form-group">
+                <label asp-for="pizzaName" class="control-label"></label>
+                <input asp-for="pizzaName" class="form-control" />
+                <span asp-validation-for="pizzaName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="type" class="control-label"></label>
+                <input asp-for="type" class="form-control" />
+                <span asp-validation-for="type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="speciality" class="control-label"></label>
+                <input asp-for="speciality" class="form-control" />
+                <span asp-validation-for="speciality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="crust" class="control-label"></label>
+                <input asp-for="crust" class="form-control" />
+                <span asp-validation-for="crust" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="price" class="control-label"></label>
+                <input asp-for="price" class="form-control" />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="no_of_slices" class="control-label"></label>
+                <input asp-for="no_of_slices" class="form-control" />
+                <span asp-validation-for="no_of_slices" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="size" class="control-label"></label>
+                <input asp-for="size" class="form-control" />
+                <span asp-validation-for="size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

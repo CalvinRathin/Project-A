@@ -1,0 +1,247 @@
+﻿@model PizzaProject.Models.Order
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h4>Select Pizza Size :</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+
+
+            @*<div class="form-group">
+                <label asp-for="orderId" class="control-label"></label>
+                <input asp-for="orderId" class="form-control" />
+                <span asp-validation-for="orderId" class="text-danger"></span>
+            </div>*@
+
+
+
+           @* <div class="form-group">
+                <label asp-for="pizzaId" class="control-label"></label>
+                <select asp-for="pizzaId" class ="form-control" asp-items="ViewBag.pizzaId"></select>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="orderDate" class="control-label"></label>
+                <input asp-for="orderDate" class="form-control" />
+                <span asp-validation-for="orderDate" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="style" class="control-label"></label>
+                <input asp-for="style" class="form-control" />
+                <span asp-validation-for="style" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="add_flavour" class="control-label"></label>
+                <input asp-for="add_flavour" class="form-control" />
+                <span asp-validation-for="add_flavour" class="text-danger"></span>
+            </div>
+            <br />*@
+
+            @*<div class="form-group">
+                <label asp-for="no_of_pizza" class="control-label"></label>
+                <input asp-for="no_of_pizza" class="form-control" />
+                <span asp-validation-for="no_of_pizza" class="text-danger"></span>
+            </div>*@
+
+           @* <div class="form-group">
+                <label asp-for="address" class="control-label"></label>
+                <input asp-for="address" class="form-control" />
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>*@
+           @* <br />*@
+           @* <div class="form-group">
+                <label asp-for="total_amount" class="control-label"></label>
+                <input asp-for="total_amount" class="form-control" />
+                <span asp-validation-for="total_amount" class="text-danger"></span>
+            </div>*@
+
+           @* <br />*@
+
+           @* manually entered*@
+
+          @* <div class="form-group">
+                <label> SIZE &nbsp; :&nbsp </label>
+            <select name="forma" onchange="location = this.value;">
+                <option>Select Size</option>
+                <option value="Small" target="_blank">Small</option>
+                <option value="Medium" target="_blank">Medium</option>
+                <option value="Large" target="_blank">Large</option>
+            </select>
+            </div>
+            <br>
+            <br>*@
+
+           @* <div class="form-group">
+            <tr>
+                <label>Price</label>
+                <td><input type="text" name="PPRICE" id="PPRICE" value="" /></td>
+                <br>
+                <br>
+               
+                <label for="quantity">No of Pizza</label>
+                <td><input type="text" value="" name="QTY" id="QTY" onKeyUp="multiply()" /></td>
+                <br>
+                <br>
+                <label for="quantity">Total Amount</label>
+                <td><input type="text" name="TOTAL" id="TOTAL" /></td>
+            </tr>
+            </div>*@
+            @*<br>
+            <br>*@
+
+
+           @* <div class="form-group">
+                <input type="submit" value="Order" class="btn btn-primary" />
+            </div>*@
+@*        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<script>
+    function multiply() {
+        a = Number(document.getElementById('QTY').value);
+        b = Number(document.getElementById('PPRICE').value);
+        c = a * b;
+
+        document.getElementById('TOTAL').value = c;
+    }
+</script>*@
+
+
+
+
+<h5>Place Your Order Below </h5>
+@*<style>
+    .navbar-expand-sm {
+        background-color: #E6E6FA;
+    }
+</style>*@
+<body style="background-color:#f5f5f5">
+    
+    </body>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+
+                Choose a Pizza 
+
+                <select class="form-control" id="name" name="name">
+                    <option></option>
+                    <option>x---- VEG MENU ----x</option>
+                    <option></option>
+                    <option class="pizza" value="150">🟩 Mushroom & Olive Pizza (S) - ₹ 150</option>
+                    <option class="pizza" value="200">🟩 Mushroom & Olive Pizza (M) - ₹ 200</option>
+                    <option class="pizza" value="300">🟩 Mushroom & Olive Pizza (L) - ₹ 300</option>
+
+                    <option class="pizza" value="200">🟩 Paneer Tikka Pizza (S) - ₹ 200</option>
+                    <option class="pizza" value="300">🟩 Paneer Tikka Pizza (M) - ₹ 300</option>
+                    <option class="pizza" value="400">🟩 Paneer Tikka Pizza (L) - ₹ 400</option>
+
+                    <option class="pizza" value="250">🟩 Veggie Delight Pizza (S) - ₹ 250</option>
+                    <option class="pizza" value="350">🟩 Veggie Delight Pizza (M) - ₹ 350</option>
+                    <option class="pizza" value="450">🟩 Veggie Delight Pizza (L) - ₹ 450</option>
+                   
+                    <option></option>
+                    <option>x---- NON VEG MENU ----x</option>
+                    <option></option>
+                    
+                   
+                    <option class="pizza" value="400">🟥 Pepperoni Pizza (S) - ₹ 400</option>
+                    <option class="pizza" value="500">🟥 Pepperoni Pizza (M) - ₹ 500</option>
+                    <option class="pizza" value="675">🟥 Pepperoni Pizza (L) - ₹ 675</option>
+
+                    <option class="pizza" value="300">🟥 BBQ Chicken Pizza (S) - ₹ 300</option>
+                    <option class="pizza" value="400">🟥 BBQ Chicken Pizza (M) - ₹ 400</option>
+                    <option class="pizza" value="500">🟥 BBQ Chicken Pizza (L) - ₹ 500</option>
+
+                    <option class="pizza" value="275">🟥 Hawaiian Pizza (S) - ₹ 275</option>
+                    <option class="pizza" value="375">🟥 Hawaiian Pizza (M) - ₹ 375</option>
+                    <option class="pizza" value="475">🟥 Hawaiian Pizza (L) - ₹ 475</option>
+
+                </select>
+
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="no_of_pizza" class="control-label">Number Of Pizza</label>
+                <input asp-for="no_of_pizza" id="qnty" class="form-control" onkeyup="validate()" />
+                <span asp-validation-for="no_of_pizza" class="text-danger"></span>
+            </div>
+            <div class="form-group">Add Flavor
+                @*<label asp-for="AddedFlavors" class="control-label"></label>
+                <input asp-for="AddedFlavors" class="form-control" />
+                <span asp-validation-for="AddedFlavors" class="text-danger"></span>*@
+                <select asp-for="add_flavour" class="form-control" asp-items="ViewBag.add_flavour" name="add_flavour" >
+                    <option></option>
+                    <option class="Extra">Extra Cheese</option>
+                    <option class="Extra">Extra Mayonaise</option>
+                    <option class="Extra">Extra Pepperoni</option>
+                    <option class="Extra">Extra Onions</option>
+                    <option class="Extra">BBQ Sauce</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="address" class="control-label"> Address</label>
+                <input asp-for="address" class="form-control" required/>
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="total_amount" class="control-label">Total</label>
+                <input asp-for="total_amount" id="tot" class="form-control" readonly/>
+                <span asp-validation-for="total_amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pizzaId" class="control-label"></label>
+                <select asp-for="pizzaId" class ="form-control" asp-items="ViewBag.pizzaId"></select>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Order" onclick="confirm('Confirm Order')" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Status" asp-action="Index"></a> 
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        //var ert=0;
+        //var emd=0;
+        
+        $("#name").change(function () {
+          var pizzza = $("#name option:selected").val();
+          window.ert = parseInt(pizzza);
+                  
+        });
+       
+        //$(document).ready(function () { validate(); });
+        function validate(){
+        var quan=$("#qnty").val();
+        var emd=parseInt(quan);
+        
+            var total = ert * emd;
+            $('#tot').val(total);
+        }
+        
+    </script>
+}

@@ -1,0 +1,37 @@
+﻿@model PizzaProject.Models.Status
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">@ViewBag.Message</div>
+}
+<div>
+    <h4>Status</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.status_details)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.status_details)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Order)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Order.orderId)
+        </dd>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Order.orderDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.statusId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

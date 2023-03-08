@@ -1,0 +1,190 @@
+﻿@model PizzaProject.Models.Order
+@{
+    ViewData["Title"] = "Large";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<html>
+<label>Size</label>
+<select name="forma" onchange="location = this.value;">
+    <option>Large Pizza</option>
+    <option value="Create" target="_blank">Select Size</option>
+    <option value="Small" target="_blank">Small</option>
+    <option value="Medium" target="_blank">Medium</option>
+    <option value="Large" target="_blank">Large</option>
+</select>
+<br>
+<br>
+
+
+
+<br>
+<br>
+
+<tr>
+    <label>Price</label>
+    <td><input type="text" name="PPRICE" id="PPRICE" value="250" /></td>
+    <br>
+    <br>
+
+    <label for="quantity">No of Pizza</label>
+    <td><input type="text" value="" name="QTY" id="QTY" onKeyUp="multiply()" /></td>
+    <br>
+    <br>
+    <label for="quantity">Total Amount</label>
+    <td><input type="text" name="TOTAL" id="TOTAL" /></td>
+</tr>
+<br>
+<br>
+<script>
+    function multiply() {
+        a = Number(document.getElementById('QTY').value);
+        b = Number(document.getElementById('PPRICE').value);
+        c = a * b;
+
+        document.getElementById('TOTAL').value = c;
+    }
+</script>
+</html>*@
+
+
+@*<html>
+    <div class="row">
+    <div class="col-md-4">
+        <form asp-action="Small">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+           <label>Size</label><br />
+            <select name="forma" onchange="location = this.value;">
+                <option>Large Pizza</option>
+                <option value="Create" target="_blank">Select Size</option>
+                <option value="Small" target="_blank">Small</option>
+                <option value="Medium" target="_blank">Medium</option>
+                <option value="Large" target="_blank">Large</option>
+            </select> 
+
+            <br><br>
+
+            <div class="form-group">
+
+                Select Pizza :
+
+                <select class="form-control" id="name" name="name" >                   
+                    <option></option>
+                    <option class="pizza" value="">x---- Veg Pizza ----x</option>                   
+                    <option></option>
+                    <option class="pizza" value="">Margherita </option>
+                    <option class="pizza" value="">Veggie Delight </option>
+                    <option class="pizza" value="">Paneer Tikka</option>
+                    <option class="pizza" value="">Paneer Tikka </option>
+                    <option class="pizza" value="">Golden Corn Pizza</option>*@
+
+                    @*<option></option>*@
+                    @*<option></option>*@
+                   @* <option class="pizza" value="">x---- Non Veg Pizza ----x</option>
+                    <option></option>
+                    <option class="pizza" value="">Pepperoni </option>
+                    <option class="pizza" value="">BBQ Chicken </option>
+                    <option class="pizza" value="">Hawaiian </option>
+                    <option class="pizza" value="">Meateor </option>
+                    <option class="pizza" value="">Classic Chicken</option>
+                    </div>
+                    <br />
+                </select>*@
+
+            @*<div class="form-group">
+                <label asp-for="pizzaId" class="control-label"></label>
+                <select asp-for="pizzaId" class ="form-control" asp-items="ViewBag.pizzaId"></select>
+            </div>
+            <br />*@
+
+            @*<br />
+            <div class="form-group">
+                Order Date :
+                <label asp-for="orderDate" class="control-label"></label>
+                <input asp-for="orderDate" class="form-control" />
+                <span asp-validation-for="orderDate" class="text-danger"></span>
+            </div>*@
+           @* <br />
+
+            <div class="form-group">
+
+                <label asp-for="style" class="control-label"></label>
+                <input asp-for="style" class="form-control" />
+                <span asp-validation-for="style" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+
+                <label asp-for="add_flavour" class="control-label"></label>
+                <input asp-for="add_flavour" class="form-control" />
+                <span asp-validation-for="add_flavour" class="text-danger"></span>
+            </div>
+            <br />*@
+
+
+            @*<div class="form-group">
+                <label asp-for="no_of_pizza" class="control-label"></label>
+                <input asp-for="no_of_pizza" class="form-control" />
+                <span asp-validation-for="no_of_pizza" class="text-danger"></span>
+            </div>*@
+
+@* <div class="form-group">
+
+                <label asp-for="address" class="control-label"></label>
+                <input asp-for="address" class="form-control" />
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+<br />*@
+            @* <div class="form-group">
+                <label asp-for="total_amount" class="control-label"></label>
+                <input asp-for="total_amount" class="form-control" />
+                <span asp-validation-for="total_amount" class="text-danger"></span>
+            </div> *@
+
+
+@*
+            <tr>
+                <label>Price</label>
+                <br />
+                <td><input type="text" name="PPRICE" id="PPRICE" value="250" readonly /></td>
+                <br>
+                <br>
+
+                <label for="quantity">No of Pizza</label><br />
+                <td><input type="text" value="" name="QTY" id="QTY" onKeyUp="multiply()" /></td>
+                <br>
+                <br>
+                <label for="quantity">Total Amount</label>
+                <br />
+                <td><input type="text" name="TOTAL" id="TOTAL"  readonly /></td>
+            </tr>
+  <br>
+
+
+ <div class="form-group">
+                <input type="submit" value="Order" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+<script>
+    function multiply()
+{
+    a = Number(document.getElementById('QTY').value);
+    b = Number(document.getElementById('PPRICE').value);
+    c = a * b;
+
+    document.getElementById('TOTAL').value = c;
+}
+</script>
+</html>*@
+
+
+
